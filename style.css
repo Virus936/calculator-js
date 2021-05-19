@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  border-sizing:border-box;
+  border-radius:5px;
+  font-family:Spartan;
+
+}
+:root{
+
+  --main-background: hsl(222, 26%, 31%);
+  --toggle-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+  
+
+  --key-background: hsl(225, 21%, 49%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --key-background-toggle: hsl(6, 63%, 50%);
+  --key-shadow: hsl(6, 70%, 34%);
+  --key-background2: #EAE3DC;
+  --key-shadow: hsl(28, 16%, 65%);
+
+  --text1: hsl(221, 14%, 31%);
+  --text2: hsl(0, 0, 100%);
+
+}
+body{
+  background-color:var(--main-background);
+  color: var(--key-background2) ;
+  padding:20px
+}
+
+.calculator{
+  max-width:600px;
+  margin:0 auto;
+
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  margin:20px;
+}
+header :last-child{
+margin-left:auto;
+}
+
+.resultDisplay{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height:4rem;
+  font-size: 30px;
+  margin-bottom:20px;
+  padding-right:20px;
+
+  background-color:var(--screen-background);
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap:20px;
+  background-color: var(--toggle-background);
+  padding: 20px;
+}
+
+.buttons div{
+  display: flex;
+  height:3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--key-background2);
+  color:black;
+  cursor:pointer;
+}
+.buttons .del{
+  background-color: var(--key-background);
+  color:var(--key-background2)
+}
+
+.buttons div:nth-last-child(2){
+  grid-column:span 2;
+  background-color: var(--key-background);
+  color:var(--key-background2);
+}
+.buttons div:last-child{
+  background-color: var(--key-background-toggle);
+  grid-column:span 2;
+  color:var(--key-background2);
+}
